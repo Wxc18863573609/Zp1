@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="@dimen/dp_27"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/retitle"
+        android:background="@drawable/dlbg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_180">
+        <ImageView
+            android:layout_width="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_height="@dimen/dp_20"
+            android:id="@+id/backs"
+            android:src="@drawable/jz_back_normal"
+            />
+
+    </RelativeLayout>
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_marginTop="@dimen/dp_130"
+        android:layout_centerHorizontal="true"
+        android:layout_width="@dimen/dp_330"
+        card_view:cardCornerRadius="8dp"
+        android:paddingTop="@dimen/dp_5"
+        card_view:contentPadding="8dp"
+        android:layout_height="@dimen/dp_180">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/liner"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                    android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:id="@+id/phone_login"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        />
+
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_13"
+                    android:background="@color/edcolor"
+                    android:layout_width="@dimen/dp_300"
+                    android:orientation="horizontal"
+                    android:layout_height="@dimen/dp_40">
+                    <ImageView
+                        android:layout_width="@dimen/dp_25"
+                        android:layout_height="@dimen/dp_20"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:src="@drawable/phone"
+                        />
+                    <EditText
+                        android:id="@+id/ed_phone"
+                        android:layout_width="@dimen/dp_224"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:layout_height="match_parent"
+                        android:maxLength="11"
+                        android:numeric="integer"
+                        android:digits="1234567890"
+                        android:background="@null"
+                        android:hint="@string/qsrphone" />
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+            <Button
+                android:layout_below="@id/liner"
+                android:layout_centerHorizontal="true"
+                android:layout_width="@dimen/dp_310"
+                android:layout_marginTop="@dimen/dp_30"
+                android:layout_height="wrap_content"
+                android:text="下一步"
+                android:id="@+id/start_loging"
+                android:textSize="20sp"
+                android:background="@drawable/myloginbtnshape"
+                android:textColor="@color/white_color"
+                />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+
+</RelativeLayout>

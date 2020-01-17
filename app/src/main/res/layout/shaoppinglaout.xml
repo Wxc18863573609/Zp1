@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:orientation="vertical"
+        card_view:cardBackgroundColor="#3F2727"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardElevation="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/more_number"
+                android:text="商品"
+                android:textColor="@color/white_color"
+                />
+             <RelativeLayout
+                 android:id="@+id/req"
+                 android:layout_marginTop="@dimen/dp_10"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+                 <ImageView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:src="@drawable/quesheng"
+                     android:layout_centerHorizontal="true"
+                     android:id="@+id/que"
+                     />
+                  <TextView
+                      android:layout_centerHorizontal="true"
+                      android:layout_below="@+id/que"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textColor="@color/white"
+                      android:text="暂无数据"
+                      />
+             </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/shaoping_recyview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

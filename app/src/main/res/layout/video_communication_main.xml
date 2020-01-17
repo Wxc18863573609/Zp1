@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.zupu.zp.testpakeyge.TitleLayout
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            app:name="登录房间">
+
+            <Button
+                android:id="@+id/goBackToMainUIFromVideoCommunication"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:onClick="goBackToMainUIFromVideoCommunication"
+                android:background="@drawable/ic_round_left" />
+
+        </com.zupu.zp.testpakeyge.TitleLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="房间名称:"
+                android:id="@+id/tv_roomid_symbol"
+                android:layout_marginTop="50px"
+                android:layout_marginHorizontal="50px" />
+
+            <EditText
+                android:id="@+id/ed_room_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_roomid_symbol"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="20px"
+                android:hint="请输入房间名称"
+                android:layout_marginHorizontal="50px" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="您和您要通话的对象登录同一房间即可通话"
+                android:id="@+id/tv_roomid_advice_symbol"
+                android:layout_below="@+id/ed_room_id"
+                android:layout_marginTop="20px"
+                android:layout_marginHorizontal="50px" />
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_joinRoom"
+                android:background="@drawable/mystartbtnshape"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tv_roomid_advice_symbol"
+                android:layout_marginTop="50px"
+                android:textColor="@color/white_color"
+                android:text="登陆房间" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</layout>
+

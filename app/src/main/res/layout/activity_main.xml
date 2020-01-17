@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/root_view"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"></FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E6D2D2"
+        android:id="@+id/v1"
+        />
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
+        android:background="#fff"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent"
+            android:id="@+id/v2"
+            android:visibility="gone"
+            />
+   <!--     <RadioButton
+            android:id="@+id/btn1"
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/selecter1"
+            android:button="@null"
+            android:text=""
+            android:checked="true" />
+
+-->
+
+        <RadioButton
+            android:id="@+id/btn1"
+            android:visibility="gone"
+            android:gravity="center"
+            android:button="@null"
+            android:drawableTop="@drawable/selecter1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="10sp"
+            android:layout_height="match_parent"
+            android:textColor="@drawable/selector_tab_color"
+            android:text="@string/vpfist"
+            />
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent"
+            android:id="@+id/v3"
+            android:visibility="gone"
+            />
+<!--        <RadioButton
+            android:id="@+id/btn2"
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/selecterss"
+            android:button="@null" />-->
+        <RadioButton
+            android:id="@+id/btn2"
+            android:visibility="gone"
+            android:gravity="center"
+            android:button="@null"
+            android:drawableTop="@drawable/selecterss"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="10sp"
+            android:layout_height="match_parent"
+            android:textColor="@drawable/selector_tab_color"
+            android:text="@string/vpss"
+            />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent"
+            android:id="@+id/v4"
+            android:visibility="gone"
+            />
+        <RadioButton
+            android:id="@+id/btn3"
+            android:visibility="gone"
+            android:gravity="center"
+            android:button="@null"
+            android:drawableTop="@drawable/selecterdoctor"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="10sp"
+            android:layout_height="match_parent"
+            android:textColor="@drawable/selector_tab_color"
+            android:text="@string/vpfdorcter"
+            />
+        <!--<RadioButton
+            android:id="@+id/btn3"
+            android:layout_width="0dp"
+            android:visibility="gone"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/selecterdoctor"
+            android:button="@null" />-->
+   <!--     <View
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent"
+            android:id="@+id/v5"
+            android:visibility="gone"-->
+            />
+    <!--    <RadioButton
+            android:id="@+id/btn4"
+            android:layout_width="0dp"
+            android:visibility="gone"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/selecterbwg"
+            android:button="@null" />-->
+     <!--   <RadioButton
+            android:id="@+id/btn4"
+            android:visibility="gone"
+            android:gravity="center"
+            android:button="@null"
+            android:drawableTop="@drawable/selecterbwg"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="10sp"
+            android:layout_height="match_parent"
+            android:textColor="@drawable/selector_tab_color"
+            android:text="博物馆"
+            />-->
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent"
+            android:id="@+id/v6"
+            />
+
+        <RadioButton
+            android:id="@+id/btn6"
+            android:gravity="center"
+            android:button="@null"
+            android:drawableTop="@drawable/selecterzq"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="10sp"
+            android:layout_height="match_parent"
+            android:textColor="@drawable/selector_tab_color"
+            android:text="@string/vpzqq"
+            />
+ <!--       <RadioButton
+            android:id="@+id/btn6"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/selecterzq"
+            android:button="@null"
+            android:checked="true" />-->
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent"
+            android:id="@+id/v7"
+            />
+        <RadioButton
+            android:id="@+id/btn7"
+            android:gravity="center"
+            android:button="@null"
+            android:drawableTop="@drawable/selectersc"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="10sp"
+            android:layout_height="match_parent"
+            android:textColor="@drawable/selector_tab_color"
+            android:text="@string/vpsc"
+            />
+    <!--    <RadioButton
+            android:id="@+id/btn7"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/selectersc"
+            android:button="@null" />-->
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent"
+            android:id="@+id/v8"
+            />
+
+        <RadioButton
+            android:id="@+id/btn8"
+            android:gravity="center"
+            android:button="@null"
+            android:drawableTop="@drawable/selecterzp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="10sp"
+            android:layout_height="match_parent"
+            android:textColor="@drawable/selector_tab_color"
+            android:text="@string/vpzp"
+            />
+       <!-- <RadioButton
+            android:id="@+id/btn8"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/selecterzp"
+            android:button="@null" />-->
+      <!--  <View
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent"
+            android:id="@+id/v9"
+            />-->
+       <!-- <RadioButton
+            android:id="@+id/btn9"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/selecterjng"
+            android:button="@null" />-->
+
+       <!-- <RadioButton
+            android:id="@+id/btn9"
+            android:gravity="center"
+            android:button="@null"
+            android:drawableTop="@drawable/selecterjng"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="10sp"
+            android:layout_height="match_parent"
+            android:textColor="@drawable/selector_tab_color"
+            android:text="博物馆"-->
+            />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent"
+            android:id="@+id/v10"
+            />
+   <!--     <RadioButton
+            android:id="@+id/btn5"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/dp_50"
+            android:background="@drawable/selectermy"
+            android:button="@null" />-->
+        <RadioButton
+            android:id="@+id/btn5"
+            android:gravity="center"
+            android:button="@null"
+            android:drawableTop="@drawable/selectermy"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="10sp"
+            android:layout_height="match_parent"
+            android:textColor="@drawable/selector_tab_color"
+            android:text="@string/vpmy"
+            />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent"
+            android:id="@+id/v11"
+            />
+        <Button
+            android:id="@+id/btn10"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:background="@drawable/high"
+            android:button="@null" />
+
+    </RadioGroup>
+</LinearLayout>
+    <RelativeLayout
+        android:id="@+id/rebithday"
+        android:visibility="gone"
+        android:background="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_width="@dimen/dp_300"
+        android:orientation="horizontal"
+        android:layout_height="@dimen/dp_350">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_330"
+            android:src="@drawable/happybirthday"
+            android:id="@+id/bithday"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bithday"
+            android:text="@string/brithday"
+            android:layout_centerHorizontal="true"
+            />
+
+    </RelativeLayout>
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="国际化"
+    android:visibility="gone"
+    android:id="@+id/btnss"
+    />
+
+</RelativeLayout>

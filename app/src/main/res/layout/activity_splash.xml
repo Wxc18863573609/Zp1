@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".myactivity.SplashActivity">
+    <RelativeLayout
+        android:id="@+id/reyd"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:id="@+id/vp"
+        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:id="@+id/rg"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:id="@+id/btn1"
+            android:checked="true"
+            android:layout_height="match_parent" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:id="@+id/btn2"
+            android:layout_height="match_parent" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:id="@+id/btn3"
+            android:layout_height="match_parent" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:id="@+id/btn4"
+            android:layout_height="match_parent" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:id="@+id/btn5"
+            android:layout_height="match_parent" />
+    </RadioGroup>
+    <Button
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_230"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+       android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        android:background="@drawable/mystartbtnshape"
+        android:text="@string/startty"
+        android:textColor="@color/white"
+        android:id="@+id/btn"
+        />
+    </RelativeLayout>
+
+</RelativeLayout>

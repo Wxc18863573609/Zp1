@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="导航"
+        android:id="@+id/btns"
+        android:layout_marginTop="@dimen/dp_50"
+        android:visibility="gone"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+    <android.support.design.widget.TabLayout
+        android:layout_marginTop="@dimen/dp_25"
+        android:layout_width="@dimen/dp_220"
+        app:tabSelectedTextColor="#6D0C22"
+        android:layout_height="@dimen/dp_42"
+        android:id="@+id/tab"
+        >
+    </android.support.design.widget.TabLayout>
+
+        <android.support.v4.view.ViewPager
+            android:layout_marginLeft="@dimen/dp_6"
+            android:layout_marginRight="@dimen/dp_6"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_width="match_parent"
+            android:id="@+id/vp"
+            android:layout_height="match_parent">
+        </android.support.v4.view.ViewPager>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="@dimen/dp_22"
+        android:layout_height="@dimen/dp_22"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_24"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/live"
+        android:id="@+id/jump"
+        />
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_below="@+id/jump"
+          android:layout_height="wrap_content"
+          android:textSize="10sp"
+          android:text="@string/startzb"
+          android:layout_marginRight="@dimen/dp_17"
+          android:layout_alignParentRight="true"
+          />
+
+
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:background="#30000001"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="@dimen/dp_50">
+    <EditText
+        android:layout_width="@dimen/dp_300"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:hint="输入赠送数量,最多1314个"
+        android:id="@+id/ed_num"
+        />
+  <Button
+      android:layout_width="@dimen/dp_60"
+      android:layout_alignParentRight="true"
+      android:background="@drawable/mystartbtnshape"
+      android:text="确认"
+      android:textColor="@color/white_color"
+      android:layout_height="@dimen/dp_30" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".myactivity.PicActivity">
+
+
+<ImageView
+    android:layout_width="40dp"
+    android:layout_height="@dimen/dp_40"
+    android:id="@+id/testimage"
+    android:src="@drawable/ic_launcher_background"
+    />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/testimage"
+        android:layout_height="wrap_content"
+        android:text="视频相册"
+        android:id="@+id/sp"
+        />
+     <Button
+         android:layout_below="@+id/sp"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:id="@+id/ps"
+          android:text="拍摄视频"
+         />
+</RelativeLayout>

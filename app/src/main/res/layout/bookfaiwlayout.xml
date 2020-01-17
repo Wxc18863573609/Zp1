@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mulu_bg">
+   <!-- <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">-->
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/titlename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:layout_marginTop="@dimen/dp_5"
+        android:textStyle="bold"
+        android:text="编委会" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_height="@dimen/dp_20"
+        android:src="@drawable/bianji"
+        android:layout_toLeftOf="@id/bianji"
+
+        />
+    <TextView
+        android:id="@+id/bianji"
+        android:layout_marginTop="@dimen/dp_7"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="编辑"
+        android:textColor="@color/red"
+        android:layout_alignParentRight="true"
+        />
+    <TextView
+        android:id="@+id/textwb"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_20"
+        android:autoSizeTextType="uniform"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="未录入"
+        />
+</RelativeLayout>
+   <!-- </ScrollView>-->
+</RelativeLayout>

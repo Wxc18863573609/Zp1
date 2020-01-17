@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginTop="@dimen/dp_25"
+    android:layout_height="match_parent">
+
+
+    <WebView
+        android:id="@+id/markweb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </WebView>
+    <com.zupu.zp.utliss.PhotoView
+        android:visibility="gone"
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/shanping"
+        android:scaleType="centerInside"
+        />
+</RelativeLayout>

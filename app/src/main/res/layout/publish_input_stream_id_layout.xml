@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_220"
+        android:background="#00000000"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="streamID:"
+                android:textColor="@color/white_color"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/ed_stream_id"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white_color"
+            android:hint="请输入streamID"
+            android:padding="8dp"
+            android:textSize="14sp"
+            app:key="stream_id" />
+
+        <TextView
+            android:id="@+id/login_room"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:autoLink="all"
+            android:gravity="center_vertical"
+            android:text="@string/stream_id_describe"
+            android:textColor="@color/white_color" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginLeft="@dimen/dp_110"
+            android:layout_centerVertical="true"
+            android:id="@+id/meiy"
+            android:src="@drawable/meiyan"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="美颜"
+            android:textColor="@color/white_color"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_122"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_centerVertical="true"
+            android:src="@drawable/lvjing"
+            android:layout_marginLeft="@dimen/dp_50"
+            android:id="@+id/lvj"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="滤镜"
+            android:textColor="@color/white_color"
+            android:layout_marginLeft="@dimen/dp_60"
+            />
+    </LinearLayout>
+</LinearLayout>
+        <Button
+            android:layout_marginTop="@dimen/dp_25"
+            android:id="@+id/start_button"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/mystartbtnshape"
+            android:textColor="@color/white_color"
+            android:onClick="onStart" />
+
+        <TextView
+            android:id="@+id/link_code_demo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:onClick="goCodeDemo"
+            android:text="开始视频直播"
+            android:textColor="@color/blue" />
+    </LinearLayout>
+
+</layout>

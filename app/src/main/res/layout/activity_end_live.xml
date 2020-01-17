@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".myactivity.EndLiveActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_25"
+        android:background="@drawable/endbj">
+
+        <ImageView
+            android:id="@+id/endhead"
+            android:layout_width="@dimen/dp_55"
+            android:layout_height="@dimen/dp_55"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_40"
+            android:src="@drawable/zhanwei" />
+
+        <TextView
+            android:id="@+id/end_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/endhead"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_15"
+            android:text="姓名"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/end_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/end_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="id"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/end_v1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_below="@id/end_id"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_30"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/end_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/end_v1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="0"
+            android:textColor="@color/yellow"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/moneybs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/end_money"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_15"
+            android:text="族币"
+            android:textColor="@color/garys"
+            android:textSize="18sp" />
+
+        <View
+            android:id="@+id/end_v2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_below="@id/moneybs"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_30"
+            android:background="@color/white" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/end_v2"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/dp_70">
+
+            <TextView
+                android:id="@+id/hdcs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_15"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+            <TextView
+                android:layout_below="@+id/hdcs"
+                android:id="@+id/hdbs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_7"
+                android:text="互动次数"
+                android:textColor="@color/garys"
+                android:textSize="18sp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/reright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/end_v2"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_70">
+            <TextView
+                android:id="@+id/ljgk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_15"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+            <TextView
+                android:layout_below="@+id/ljgk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_7"
+                android:text="累计观看"
+                android:textColor="@color/garys"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始时间"
+            android:id="@+id/starttimes"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_below="@id/reright"
+            android:layout_marginTop="@dimen/dp_50"
+            />
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="时间"
+            android:id="@+id/endtimes"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_below="@id/starttimes"
+            android:layout_marginTop="@dimen/dp_25"
+            />
+
+        <Button
+            android:layout_width="@dimen/dp_200"
+            android:id="@+id/btn"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:text="返回直播列表"
+            android:textColor="@color/white"
+            android:layout_marginBottom="@dimen/dp_50"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/myendliveshape"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

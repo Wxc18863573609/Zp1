@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="quality"
+            type="com.zupu.zp.entity.StreamQuality" />
+
+        <variable
+            name="config"
+            type="com.zupu.zp.entity.SDKConfigInfo" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:keepScreenOn="true"
+        android:background="#ebeef5"
+        android:orientation="vertical">
+
+        <com.zupu.zp.testpakeyge.TitleLayout
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:name="@string/tx_start_publish_title">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="right"
+                android:layout_marginRight="2dp"
+                android:onClick="goSetting"
+                android:text="@string/tx_common" />
+
+
+        </com.zupu.zp.testpakeyge.TitleLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextureView
+                android:id="@+id/preview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+         <include
+                android:id="@+id/layout"
+                android:layout_marginTop="@dimen/dp_400"
+                layout="@layout/publish_input_stream_id_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp">
+            </include>
+
+            <RelativeLayout
+                android:id="@+id/publish_state_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15dp"
+                android:visibility="gone">
+
+                <TextureView
+                    android:id="@+id/audienceView1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:visibility="visible"
+                    />
+
+
+
+                <LinearLayout
+                    android:id="@+id/ll_gift_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="250dp"
+                    android:orientation="vertical">
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/tx_room_id"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_alignParentTop="true"
+                    android:text="@{quality.roomID}"
+                    android:textColor="@color/white_color" />
+
+                <TextView
+                    android:id="@+id/tx_stream_id"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/tx_room_id"
+                    android:text="@{quality.streamID}"
+                    android:textColor="@color/white_color" />
+
+                <TextView
+                    android:id="@+id/tx_resolution"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/tx_stream_id"
+                    android:text="@{quality.resolution}"
+                    android:textColor="@color/white_color" />
+
+                <TextView
+                    android:id="@+id/tx_bitrate"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/tx_resolution"
+                    android:text="@{quality.bitrate}"
+                    android:textColor="@color/white_color" />
+
+                <TextView
+                    android:id="@+id/tx_fps"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/tx_bitrate"
+                    android:text="@{quality.fps}"
+                    android:textColor="@color/white_color" />
+
+                <RelativeLayout
+                    android:id="@+id/rel"
+                    android:layout_width="@dimen/dp_150"
+                    android:layout_height="@dimen/dp_35"
+                    android:background="@drawable/myliveheadshape">
+
+
+                    <ImageView
+                        android:id="@+id/headimg"
+                        android:layout_width="@dimen/dp_35"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <TextView
+                        android:id="@+id/zbname"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_toRightOf="@+id/headimg"
+                        android:text="主播名称"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/usernumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/zbname"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_toRightOf="@+id/headimg"
+                        android:text="0"
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:id="@+id/guanzhu"
+                        android:layout_width="@dimen/dp_55"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp_1"
+                        android:src="@drawable/zhubologo" />
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="@dimen/dp_200"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_30"
+                    android:layout_toRightOf="@id/rel">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/userrecycel"
+                        android:layout_width="@dimen/dp_100"
+                        android:layout_height="@dimen/dp_30"
+                        ></android.support.v7.widget.RecyclerView>
+
+                    <ImageView
+                        android:id="@+id/kill"
+                        android:layout_width="@dimen/dp_20"
+                        android:layout_height="@dimen/dp_20"
+                        android:layout_marginTop="@dimen/dp_7"
+                        android:src="@drawable/kill" />
+
+                </LinearLayout>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/zbrecycouview"
+                    android:layout_width="@dimen/dp_150"
+                    android:layout_height="@dimen/dp_170"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/dp_100">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <LinearLayout
+                    android:id="@+id/hideorshow"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true">
+
+                <RelativeLayout
+                    android:id="@+id/pl"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:background="@drawable/myliveheadshape">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_25"
+                        android:id="@+id/songli"
+                        android:layout_height="@dimen/dp_25"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/pl" />
+
+                </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/ref"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/dp_60"
+                        android:layout_toRightOf="@+id/sendmessgetext"
+                        android:background="@drawable/myliveheadshape">
+
+                        <ImageView
+                            android:id="@+id/fx"
+                            android:layout_width="@dimen/dp_25"
+                            android:layout_height="@dimen/dp_25"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/fxp" />
+
+                    </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/beauty"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/pl"
+                    android:background="@drawable/myliveheadshape">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_25"
+                        android:layout_height="@dimen/dp_25"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/meiyan" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/filter"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/beauty"
+                    android:background="@drawable/myliveheadshape">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_25"
+                        android:layout_height="@dimen/dp_25"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/lvjing" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/camera"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/filter"
+                    android:background="@drawable/myliveheadshape">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/camera" />
+
+                </RelativeLayout>
+                </LinearLayout>
+                <Switch
+                    android:id="@+id/sw_mic"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_alignParentBottom="true"
+                    android:checked="@{config.enableMic}"
+                    android:text="@string/tx_mic_state"
+                    android:textColor="@color/white_color" />
+
+                <Switch
+                    android:id="@+id/sw_camera"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_above="@+id/sw_mic"
+                    android:checked="@{config.enableCamera}"
+                    android:text="@string/tx_camera"
+                    android:textColor="@color/white_color" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>
